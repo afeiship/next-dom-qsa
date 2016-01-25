@@ -1,0 +1,28 @@
+{
+  "name": "next-dom-qsa",
+  "version": "1.0.0",
+  "description": "A query selector based on next",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:afeiship/next-dom-qsa.git"
+  },
+  "keywords": [
+    "querySelector"
+  ],
+  "files": [
+    "dist/QuerySelector.js"
+  ],
+  "author": "afei",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-uglify": "^1.5.1"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="../bower_components/next-js-core/dest/nx.core.min.js"></script>
+  <script type="text/javascript" src="../src/QuerySelector.js"></script>
+</head>
+<body>
+  <h1>ID selector</h1>
+  <div id="id1">
+    test #id1
+  </div>
+
+  <h2>Class Selector</h2>
+  <div class="cls1">
+    Class selector
+  </div>
+
+  <h2>Tag Selector</h2>
+  <p>p1</p>
+  <p>p2</p>
+  <p>p3</p>
+
+
+  <h2>All</h2>
+  <input type="text" name="t1"/>
+  <input type="text" name="t1"/>
+
+  <script type="text/javascript">
+    var id1=nx.$('#id1');
+    var cls2=nx.$('.cls1');
+    var p3=nx.$('p');
+    var t4=nx.$('[name="t1"]');
+
+
+    console.log(id1,cls2,p3,t4);
+  </script>
+
+
+</body>
+</html>
