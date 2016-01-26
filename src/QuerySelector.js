@@ -14,7 +14,7 @@
         var result;
         switch (selectorType) {
           case 'String':
-            result = this.dispatcher(inSelector, context);
+            result = QuerySelector.dispatcher(inSelector, context);
             result.selector = inSelector;
             break;
         }
@@ -51,6 +51,6 @@
     }
   });
 
-  nx.$ = QuerySelector.select.bind(QuerySelector);
+  nx.$ = QuerySelector.select;
 
 }(nx, nx.GLOBAL));
