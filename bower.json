@@ -4,9 +4,8 @@
     "afei"
   ],
   "description": "A modern dom selector based on next toolkit.",
-  "main": "dist/QuerySelector.js",
-  "moduleType": [
-    "node"
+  "main":[
+    "dist/QuerySelector.js"
   ],
   "keywords": [
     "dom",

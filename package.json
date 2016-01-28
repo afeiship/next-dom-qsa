@@ -14,7 +14,8 @@
     "url": "git@github.com:afeiship/next-dom-qsa.git"
   },
   "keywords": [
-    "querySelector"
+    "querySelector",
+    "next"
   ],
   "files": [
     "dist/QuerySelector.js"
