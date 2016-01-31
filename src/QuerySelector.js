@@ -51,6 +51,6 @@
     }
   });
 
-  nx.$ = QuerySelector.select;
+  nx.qsa = QuerySelector.select;
 
 }(nx, nx.GLOBAL));

@@ -9,19 +9,19 @@
 ##usage:
 + ID selector:
 ```javascript
-  nx.$('#id1');
+  nx.qsa('#id1');
 ```
 
 + Class selector:
 ```javascript
-  nx.$('.cls2');
+  nx.qsa('.cls2');
 ```
 
 + Tag selector:
 ```javascript
-  nx.$('div');
+  nx.qsa('div');
 ```
 + All selector:
 ```javascript
-  nx.$('div.cls2.cls2[role=dialog]');
+  nx.qsa('div.cls2.cls2[role=dialog]');
 ```
