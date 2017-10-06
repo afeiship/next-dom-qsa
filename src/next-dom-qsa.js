@@ -10,7 +10,7 @@
 
     var NxDomQsa = nx.declare('nx.dom.Qsa', {
       statics: {
-        select: function (inSelector, inContext) {
+        qsa: function (inSelector, inContext) {
           var context = inContext || document;
           var result = NxDomQsa.dispatcher(inSelector, context);
           return nx.mix(result,{ selector: inSelector, context: context });
