@@ -1,23 +1,15 @@
-(function () {
+(function() {
 
-  var gulp = require('gulp');
-  var del = require('del');
-  var uglify = require('gulp-uglify');
-  var conf = {
-    src: 'src',
-    dist: 'dist'
-  };
+  'use strict';
 
-  gulp.task('clean', function () {
-    del(conf.dist);
+  const gulp = require('gulp');
+  const fs = require('fs');
+
+  //import
+  fs.readdirSync('./build').map(function(file) {
+    require('./build/' + file);
   });
 
-  gulp.task('uglify', function () {
-    gulp.src(conf.src + '/*.js')
-      .pipe(uglify())
-      .pipe(gulp.dest('dist'));
-  });
-
-  gulp.task('default', ['clean', 'uglify']);
+  gulp.task('default',['build']);
 
 }());

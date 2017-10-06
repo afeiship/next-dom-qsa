@@ -1,28 +1,26 @@
 {
   "name": "next-dom-qsa",
+  "description": "A modern dom selector based on next toolkit.",
+  "main": "dist/next-dom-qsa.js",
   "authors": [
     "afei"
   ],
-  "description": "A modern dom selector based on next toolkit.",
-  "main":[
-    "dist/QuerySelector.js"
-  ],
-  "keywords": [
-    "dom",
-    "selector",
-    "next",
-    "qsa"
-  ],
   "license": "MIT",
-  "homepage": "",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-dom-qsa",
+  "moduleType": [
+    "amd"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ],
-  "dependencies": {
-    "next-js-core": "*"
-  }
+    "tests",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
 }
