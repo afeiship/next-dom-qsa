@@ -12,10 +12,10 @@
       statics: {
         qsa: function (inSelector, inContext) {
           var context = inContext || document;
-          var result = NxDomQsa.dispatcher(inSelector, context);
+          var result = NxDomQsa.dispatch(inSelector, context);
           return nx.mix(result,{ selector: inSelector, context: context });
         },
-        dispatcher: function (inString, inContext) {
+        dispatch: function (inString, inContext) {
           switch (true) {
             case idSelectorRE.test(inString):
               return this.idSelector(RegExp.$1, inContext);
