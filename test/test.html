@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test title</title>
+</head>
+<body>
+
+  <script src="../node_modules/next-js-core2/dist/next-js-core2.js"></script>
+  <script src="../src/next-dom-qsa.js"></script>
+
+  <id id="main">
+    Main content~
+  </id>
+
+  <div class="test">
+    <p>item1</p>
+    <p>item2</p>
+  </div>
+
+
+  <script>
+
+    var $ = nx.dom.Qsa.qsa;
+    var mainEl = $('#main');
+    var testEl = $('.test');
+    var pEls1 = $('p');
+    var pEls2 = $('p', testEl[0]);
+
+
+    console.log( mainEl, testEl, pEls1, pEls2);
+
+  </script>
+
+</body>
+</html>
