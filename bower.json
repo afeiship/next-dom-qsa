@@ -20,7 +20,7 @@
     "test",
     "tests",
     "src",
-    "gulp",
+    "build",
     "gulpfile.js"
   ]
 }
