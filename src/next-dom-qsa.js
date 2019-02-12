@@ -12,10 +12,10 @@
   var NxDomQsa = nx.declare('nx.DomQsa', {
     statics: {
       qsa: function(inSelector, inContext) {
-        var result = NxDomQsa.dispatch(inSelector, inContext);
+        var result = NxDomQsa.select(inSelector, inContext);
         return nx.mix(result, { selector: inSelector, context: inContext });
       },
-      dispatch: function(inString, inContext) {
+      select: function(inString, inContext) {
         switch (true) {
           case idSelectorRE.test(inString):
             return NxSelectorId.qsa(RegExp.$1, inContext);
