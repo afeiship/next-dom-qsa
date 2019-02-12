@@ -1,42 +1,32 @@
 (function() {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('next-js-core2');
+  var idSelectorRE = /^#([\w-]+)$/;
+  var classSelectorRE = /^\.([\w-]+)$/;
+  var tagSelectorRE = /^[\w-]+$/;
   var document = global.document;
+  var NxSelectorId = nx.SelectorId || require('next-selector-id');
+  var NxSelectorTag = nx.SelectorTag || require('next-selector-tag');
+  var NxSelectorClass = nx.SelectorClass || require('next-selector-class');
+  var NxSelectorQueryAll = nx.SelectorQueryAll || require('next-selector-queryAll');
 
   var NxDomQsa = nx.declare('nx.DomQsa', {
     statics: {
       qsa: function(inSelector, inContext) {
-        var context = inContext || document;
-        var result = NxDomQsa.dispatch(inSelector, context);
-        return nx.mix(result, { selector: inSelector, context: context });
+        var result = NxDomQsa.dispatch(inSelector, inContext);
+        return nx.mix(result, { selector: inSelector, context: inContext });
       },
       dispatch: function(inString, inContext) {
         switch (true) {
           case idSelectorRE.test(inString):
-            return this.idSelector(RegExp.$1, inContext);
+            return NxSelectorId.qsa(RegExp.$1, inContext);
           case tagSelectorRE.test(inString):
-            return this.tagSelector(inString, inContext);
+            return NxSelectorTag.qsa(inString, inContext);
           case classSelectorRE.test(inString):
-            return this.classSelector(RegExp.$1, inContext);
+            return NxSelectorClass.qsa(RegExp.$1, inContext);
           default:
-            return this.querySelectorAll(inString, inContext);
+            return NxSelectorQueryAll.qsa(inString, inContext);
         }
-      },
-      idSelector: function(inSelector, inContext) {
-        var el = inContext.getElementById(inSelector);
-        return el ? [el] : [];
-      },
-      tagSelector: function(inSelector, inContext) {
-        var els = inContext.getElementsByTagName(inSelector);
-        return nx.slice(els);
-      },
-      classSelector: function(inSelector, inContext) {
-        var els = inContext.getElementsByClassName(inSelector);
-        return nx.slice(els);
-      },
-      querySelectorAll: function(inSelector, inContext) {
-        var els = inContext.querySelectorAll(inSelector);
-        return nx.slice(els);
       }
     }
   });

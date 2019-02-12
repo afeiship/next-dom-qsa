@@ -27,6 +27,10 @@
     "yargs": "^4.7.1"
   },
   "dependencies": {
-    "next-js-core2": "github:afeiship/next-js-core2"
+    "next-js-core2": "github:afeiship/next-js-core2",
+    "next-selector-class": "github:afeiship/next-selector-class",
+    "next-selector-id": "github:afeiship/next-selector-id",
+    "next-selector-query-all": "github:afeiship/next-selector-query-all",
+    "next-selector-tag": "github:afeiship/next-selector-tag"
   }
 }
