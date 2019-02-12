@@ -4,7 +4,6 @@
   var idSelectorRE = /^#([\w-]+)$/;
   var classSelectorRE = /^\.([\w-]+)$/;
   var tagSelectorRE = /^[\w-]+$/;
-  var document = global.document;
   var NxSelectorId = nx.SelectorId || require('next-selector-id');
   var NxSelectorTag = nx.SelectorTag || require('next-selector-tag');
   var NxSelectorClass = nx.SelectorClass || require('next-selector-class');
